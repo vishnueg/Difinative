@@ -62,14 +62,14 @@ Go to your browser and past below URL
 http://localhost:57776/
 ```
 
-![AlertManager](vsoc_prod_supportvsoc_alertmanager.png)
+![AlertManager](vsoc_prod_support/vsoc_alertmanager.png)
 
 
 ### How to Silence the Alert from AlertManager
 
 After you login to AlertManager , Click on ```New Silence``` . Then you will get a new page like below.
 
-<img src="vsoc_prod_support/vsoc_alertmanager_silence.png" style="width:600px;height:300px;">
+![AlertManager_Silence](vsoc_prod_support/vsoc_alertmanager_silence.png)
 
  Here you have to ensure you fill the correct details and by clicking ```Preview Alerts``` verify you are going to silence the right alert for the particular environment.<br>
  Click on ```Create``` to silnce the alert

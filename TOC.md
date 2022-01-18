@@ -1,4 +1,4 @@
-# [Managed Service Documentation TOC](index.md)
+# Managed Service Documentation TOC
 
 - [Common alerts runbook](#Common-alerts-runbook)
 - [Workaround solutions document](#Workaround-solutions-document)

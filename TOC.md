@@ -1,6 +1,6 @@
 # Managed Service Documentation TOC
 
-- [Common alerts runbook](#Common-alerts-runbook)
+- [Common alerts runbook](/docs/Alerts/)
 - [Workaround solutions document](#Workaround-solutions-document)
 - [Architectural diagrams](#Architectural-diagrams)
 - [Network connectivity diagrams](#Network-connectivity-diagrams)

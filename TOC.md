@@ -4,7 +4,7 @@
 - [Workaround solutions document](#Workaround-solutions-document)
 - [VSOC Architectural diagrams](/docs/VSOC%20Production%20Support/VSOC%20Architecture%20Documentation.docx)
 - [VSOC Production Support](/docs/VSOC%20Production%20Support/VSOC-Production-Support.md)
-- [Network connectivity diagrams](#Network-connectivity-diagrams)
+- [Network connectivity Requirements from VSOC](#Network-connectivity-diagrams)
 - [Access requirements and request process](#Access-requirements-and-request-process)
 - [Contract document repository](#Contract-document-repository)
 - [Process documents for Customer Onboarding](/docs/Customer%20Onboarding/Customer_Onboarding.md)

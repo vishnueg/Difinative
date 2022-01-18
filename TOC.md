@@ -6,8 +6,8 @@
 - [Network connectivity diagrams](#Network-connectivity-diagrams)
 - [Access requirements and request process](#Access-requirements-and-request-process)
 - [Contract document repository](#Contract-document-repository)
-- [Process documents for Customer Onboarding](#Process-documents-for-Customer-Onboarding)
-- [Process documents for MS Onboarding](#Process-documents-for-MS-Onboarding)
+- [Process documents for Customer Onboarding](/docs/Customer%20Onboarding/Customer_Onboarding.md)
+- [Process documents for MS Onboarding](/docs/Managed%20Service%20Onboarding/Agent%20Onboarding.md)
 
 ## Common alerts runbook
 

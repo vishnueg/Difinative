@@ -1,2 +1,6 @@
 # Difinative
-Website repository
+
+- Customer onboarding
+- Run as is service
+- VSOC
+- Benchmarking

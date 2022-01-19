@@ -1,6 +1,5 @@
-# Difinative
+# Managed Service Support Documentation
 
-- Customer onboarding
 - Run service
   * VSOC
     - [VSOC Architectural diagrams](/docs/VSOC%20Production%20Support/VSOC%20Architecture%20Documentation.docx)
@@ -17,3 +16,10 @@
     - [KKP infrastructure benchmarking](https://github.com/jacmathew/community-components/blob/kube-benchmarking/helper/benchmarking/infra_benchmarking.md)
   * Runbooks
     - [Common alerts runbook](/docs/Alerts/)
+  * Monitoring
+    - [Etcd Monitoring](/docs/ETCD-Heatmap-main/)
+- Onboarding
+  * Customer
+    - [Process documents for Customer Onboarding](/docs/Customer%20Onboarding/Customer_Onboarding.md)
+  * Managed Service
+    - [Process documents for MS Onboarding](/docs/Managed%20Service%20Onboarding/Agent%20Onboarding.md)

@@ -3,7 +3,7 @@
 A virtual SOC is a secure web-based tool that allows you to easily monitor the security of your systems in real-time. This centralized command and control center enables together control of security operations, a better view into the security posture of your organization, and a one-stop-shop for all your security monitoring and incident response needs, not to mention that it’ll help you pass those pesky audits as well. As you know, the old philosophy of defending the walls of an enterprise is dead; it’s safe to assume that your organization will be compromised, and probably already has been. But, by using a virtual SOC, administrators can prioritize security events by focusing on the incidents that have the most impact to your business, using the latest threat intelligence to prioritize, respond and remediate.
 <br>
 
-![VSOC Brief_General architecture](C:\Users\vishn\OneDrive\Desktop\VSOC-Images\VSOC-Images\VSOC Brief_General architecture.png)
+![VSOC Brief_General architecture](VSOC-Images/VSOC_Brief_General_architecture.png)
 
 In the above diagram, one can see the overall VSOC architecture and the entry points for respective employees, i.e., VSOC employee and Customer Employee. 
 
@@ -44,7 +44,7 @@ The connection to VSOC will be based on two types on VPN:
 <br>
 The Routing between the DMZ VPC (with client VPN termination) and Customer VPCs (with Site-to-Site VPN termination) will be based on AWS VPC peering, as shown on the following picture: 
 
-![VSOC detailed architecture](VSOC detailed architecture.png)
+![VSOC detailed architecture](VSOC-Images/VSOC_detailed_architecture.png)
 
 <br>
 
@@ -88,7 +88,7 @@ Note that the port 6443 is used by KKP only if the Tunnelling Expose Strategy is
 * The HTTPS proxy will be configured as a **dynamic SNI forward proxy**. It will perform dynamic proxying based on DNS lookups of the original requested hostname based on the SNI information in the TLS handshake. For example, a HTTP request to `kkp.customer.com` is proxied after a DNS lookup for this hostname on the proxy, resolved to a proper destination IP address on the customer side. 
 * Note on the picture below, that this type of proxy does not terminate the TLS connection - just forwards the whole TCP payload. Therefore it cannot provide any authentication/authorization/identity logging in the VSOC, as the proxy does not see into the encrypted HTTP payload. 
 
-![HTTPS proxying diagram](HTTPS proxying diagram.png)
+![HTTPS proxying diagram](VSOC-Images/HTTPS_proxying_diagram.png)
  <br>
  For specific cases, the dynamic proxy can be overridden with **static mappings**. That can be used if we need to access some services on the customer side that have to run on non-standard ports (not listed in the Proxy Ports section above).
 
@@ -96,7 +96,7 @@ Note that the port 6443 is used by KKP only if the Tunnelling Expose Strategy is
  * In order to perform authentication & authorization, or at least identity logging of each HTTPS request in the VSOC, we also considered the MITM (Man-In-The-Middle) proxy approach. The MITM HTTPS proxy would terminate the TLS connections in VSOC. That would add the complexity of server certificate management into the scope, but allow for HTTP header inspection and potentially also authentication & authorization. 
  * We assume that we won’t be able to get a proper (not self-signed / custom CA issued) certificate for the customer domains. Custom CA-issued certificates for the customer domains are not a good solution, as it would require installation of the certificate of our own Certificate Authority on the VSOC user hosts. The only option that left is to map customer domains to our own VSOC-specific domain, e.g. `*.customer.vsoc.k8c.io` would be used by the VSOC users for accessing `*.customer.com`, as pictured below: 
 
-![Man-In-The-Middle MITM HTTPS proxy diagram](Man-In-The-Middle MITM HTTPS proxy diagram.jpg)
+![Man-In-The-Middle MITM HTTPS proxy diagram](VSOC-Images/Man-In-The-Middle_MITM_HTTPS_proxy_diagram.png)
 * This approach requires rewriting of the HTTP host / authority headers on the proxy. That however does not seem to be compatible with KKP when proxying web sockets connections (used by KKP UI). 
 * Also, since k8s clients (e.g. kubectl) validate the API-server's certificate based on the certificate authority data included in the kubeconfig, we cannot do the MITM proxy for api-server connections, unless we have a proper server certificate issued by the k8s control plane CA in the VSOC. 
 * Based on the described issues, we decided to go with the SNI-based forward proxy approach because of its simplicity and compatibility compared to the MITM approach. This means that the VSOC user authentication & authorization will have to be left purely on the AWS VPN Client Endpoint, and further authentication & authorization on the customer side. <br>

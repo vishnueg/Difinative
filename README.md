@@ -18,7 +18,7 @@
     - [Common alerts runbook](/docs/Alerts/)
   * Monitoring
     - [Heatmap Monitoring - Etcd](/docs/ETCD-Heatmap-main/)
-+ Onboarding
++ Process and Tools
   * Customer
     - [Ticketing Tool](/docs/Customer%20Onboarding/Customer_Onboarding.md)
   * Managed Service

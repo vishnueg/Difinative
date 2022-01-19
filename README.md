@@ -20,6 +20,6 @@
     - [Heatmap Monitoring - Etcd](/docs/ETCD-Heatmap-main/)
 + Onboarding
   * Customer
-    - [Process documents for Customer Onboarding](/docs/Customer%20Onboarding/Customer_Onboarding.md)
+    - [Ticketing Tool](/docs/Customer%20Onboarding/Customer_Onboarding.md)
   * Managed Service
-    - [Process documents for MS Onboarding](/docs/Managed%20Service%20Onboarding/Agent%20Onboarding.md)
+    - [ITSM Agent management](/docs/Managed%20Service%20Onboarding/Agent%20Onboarding.md)

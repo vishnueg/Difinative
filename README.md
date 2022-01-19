@@ -17,7 +17,7 @@
   * Runbooks
     - [Common alerts runbook](/docs/Alerts/)
   * Monitoring
-    - [Etcd Monitoring](/docs/ETCD-Heatmap-main/)
+    - [Heatmap Monitoring - Etcd](/docs/ETCD-Heatmap-main/)
 + Onboarding
   * Customer
     - [Process documents for Customer Onboarding](/docs/Customer%20Onboarding/Customer_Onboarding.md)

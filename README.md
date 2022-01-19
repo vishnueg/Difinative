@@ -1,6 +1,6 @@
 # Managed Service Support Documentation
 
-- Run service
++ Run service
   * VSOC
     - [VSOC Architectural diagrams](/docs/VSOC%20Production%20Support/VSOC%20Architecture%20Documentation.docx)
     - [VSOC Production Support](/docs/VSOC%20Production%20Support/VSOC-Production-Support.md)
@@ -18,7 +18,7 @@
     - [Common alerts runbook](/docs/Alerts/)
   * Monitoring
     - [Etcd Monitoring](/docs/ETCD-Heatmap-main/)
-- Onboarding
++ Onboarding
   * Customer
     - [Process documents for Customer Onboarding](/docs/Customer%20Onboarding/Customer_Onboarding.md)
   * Managed Service

@@ -64,7 +64,9 @@ The Routing between the DMZ VPC (with client VPN termination) and Customer VPCs 
 * Finally, the Customer VPC will host a k8s cluster, which will be used to run customer-specific services such as the above mentioned proxy, or the MLA (Monitoring, Logging and Alerting) stack. These can be exposed to the end user via the internal load-balancer services, for which we can create DNS entries in DMZ-hosted DNS resolver (e.g. `grafana.customer-a.domain`). 
 * Optionally, if the Customer VPC requires outbound Internet access (e.g. to pull images from public image repositories), that can be done by introducing of an additional subnet with an Internet Gateway and a NAT Gateway, which can be used as an exit point for the private subnets. 
 <br>
+
 ## HTTP(S) Forward Proxy 
+
 * As mentioned above, the VSOC users connected via the Client VPN to the DMZ VPC cannot access the Customer subnets directly, because of the private subnet overlaps between multiple customers. To reach endpoints at the customer side, they have to go through a proxy running in the Customer VPC. 
 * The proxy will run in the Kubernetes cluster hosted in the Customer VPC, and will be exposed via the internal load-balancer service (not exposed to the Internet, but using Customer VPC private IP). This service endpoint can have a matching DNS entry in the DMZ-hosted DNS resolver, so that e.g. any request to ```*.customer-a.domain``` is resolved to the proper load-balancer IP of the customer forward proxy. 
 <br>
